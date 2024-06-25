@@ -1,0 +1,34 @@
+\newpage % Rozdziały zaczynamy od nowej strony.
+\section{Wstęp}
+We współczesnej inżynierii oprogramowania panuje przeświadczenie, że należy uznać, iż to co nie jest przetestowane nie działa. Świadczyć może o tym fakt, że testowanie stanowi ponad 50\% kosztów produkcji oprogramowania\cite{kumar2016impacts}. Wysoki koszt testowania spowodowany jest tym jak czasochłonny i złożony jest to proces\cite{jamil2016software}. Stanowi on wyzwanie dla wszelkiej maści specjalistów począwszy od analityków biznesowych skończywszy na testerach i programistach. Oczywiste zatem jest, że istnieje potrzeba aby proces ten choć w niewielkim stopniu usprawnić gdyż niesie to za sobą potencjalnie spore oszczędności.
+
+Jednym z możliwych usprawnień jest zastępowanie testów manualnych testami automatycznymi. Takie podejście pomimo wielu zalet charakteryzuje się też tym że wymaga dużych nakładów pracy do wdrożenia gdyż wymaga ono stworzenia przez zespół deweloperski osobnego testującego programu\cite{kumar2016impacts}.
+
+Głównym celem niniejszej pracy było opracowanie i zaimplementowanie aplikacji, która służy do automatycznego generowania kodu testów. Spośród wielu typów aplikacji zdecydowano że przedmiotem badań będą aplikacje sterowane procesami (PDA), których tematykę przybliżono w sekcji \ref{subsec:pda}. Nie odłącznym elementem PDA jest modelowanie i notacja procesów biznesowych (BPMN) i systemy zarządzania nimi (BPMS) dlatego odpowiednio w sekcjach \ref{subsec:bpmn} i \ref{subec:bpms} w ramach wstępu omówiono te zagadnienia. W sekcji \ref{subsec:cel} przedstawiono dokładny cel oraz zakres tej pracy.
+
+\subsection{Aplikacje sterowane procesami (PDA)}
+\label{subsec:pda}
+Aplikacje sterowane procesami (ang. Process-Driven Applications - PDA) charakteryzują się tym, że znacząca część ich logiki biznesowej jest zaimplementowana  jako wykonywalny model procesu, zazwyczaj w ustandaryzowanej notacji BPMN. W odróżnieniu od tradycyjnych aplikacji gdzie logika jest zaimplementowana w kodzie, PDA umożliwiają modelowanie procesów w sposób graficzny, co ułatwia ich zrozumienie i modyfikację. Aplikacje sterowane procesami integrują różnorodne elementy, takie jak zarządzanie przepływem pracy, automatyzacja zadań oraz monitorowanie i optymalizacja procesów biznesowych. Dzięki temu organizacje mogą lepiej zarządzać swoimi operacjami, zwiększając efektywność oraz redukując błędy i koszty operacyjne\cite{Process-Driven-Applications-with-BPMN}.
+
+\subsection{Modelowanie i Notacja Procesów 
+\label{subsec:bpmn}
+Biznesowych (BPMN)}
+BPMN (ang. Business Process Model and Notation) jest standardem modelowania procesów biznesowych opracowanym przez Object Management Group (OMG) \cite{omg_bpmn}. Umożliwia on graficzne przedstawienie procesów biznesowych, co wspiera lepszą komunikację między analitykami biznesowymi a zespołami technicznymi. Dzięki standaryzowanej notacji, BPMN pozwala na precyzyjne definiowanie sekwencji działań, punktów decyzyjnych, przepływów danych oraz interakcji między różnymi uczestnikami procesów\cite{white_bpmn}. O tym jak bardzo uniwersalny jest ten standard może świadczyć fakt, że jest on szeroko stosowany w różnych branżach, od finansów\cite{finance_bpmn} po produkcję\cite{production_bpmn} i jest kluczowym narzędziem w zarządzaniu procesami biznesowymi\cite{dumas_bpmn}.
+
+\subsection{Systemy zarządzania procesami biznesowymi 
+\label{subec:bpms}
+(BPMS)}
+Implementacja PDA wiąże się z wykorzystaniem narzędzi do zarządzania procesami biznesowymi (ang. Business Process Management Systems - BPMS)\cite{techtarget_bpms}, które oferują funkcjonalności takie jak:
+\begin{itemize}
+\item Modelowanie procesów – tworzenie i edytowanie modeli procesów biznesowych.
+\item Symulacja – testowanie modeli procesów przed ich wdrożeniem.
+\item Wykonanie – uruchamianie i monitorowanie procesów w czasie rzeczywistym.
+\item Analiza – zbieranie i analizowanie danych dotyczących wykonania procesów w celu ich optymalizacji.
+\end{itemize}
+Na rynku istnieje wiele różnych implementacji systemów do zarządzania procesami biznesowymi (ang. Business Process Management Systems - BPMS), które wspierają tworzenie i zarządzanie PDA. Przykładami takich systemów są Camunda\cite{camunda}, IBM Business Automation Workflow\cite{ibm_baw}, Appian\cite{appian}, Pega\cite{pega}, Oracle BPM Suite\cite{oracle_bpm}, Bizagi\cite{bizagi}, Bonita\cite{bonitasoft}, K2\cite{k2}, Microsoft Power Automate\cite{microsoft_power_automate} oraz Signavio\cite{signavio}. Każdy z tych systemów oferuje unikalne funkcje i możliwości, które mogą być dostosowane do specyficznych potrzeb organizacji.
+
+\subsection{Cel i zakres pracy}
+\label{subsec:cel}
+Celem niniejszej pracy było zaimplementowanie narzędzia służącego do weryfikacji zgodności procesów biznesowych zapisanych w notacji BPMN z diagramami przypadków użycia w notacji UML. Zaimplementowana aplikacja miała na celu dostarczenie interesariuszom informacji czy proces biznesowy będący implementacją przypadku użycia spełnia stawiane przez niego założenia odnośnie elementów procesu i możliwych scenariuszy.
+
+
